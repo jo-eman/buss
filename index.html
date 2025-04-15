@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bussplanerare Mariehamn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bussplanerare Mariehamn (Lokal)</h1>
+
+    <div class="controls">
+        <label for="start-stop">Från:</label>
+        <input list="stops-list" id="start-stop" name="start-stop" required>
+
+        <label for="end-stop">Till:</label>
+        <input list="stops-list" id="end-stop" name="end-stop" required>
+
+        <datalist id="stops-list">
+            </datalist>
+
+        <label for="travel-date">Datum:</label>
+        <input type="date" id="travel-date" name="travel-date" required>
+
+        <label for="travel-time">Avgång efter kl:</label>
+        <input type="time" id="travel-time" name="travel-time" required>
+
+        <button id="search-button">Sök resa</button>
+    </div>
+
+    <h2>Reseförslag</h2>
+    <div id="results">
+        <p>Välj start, destination, datum och tid för att söka.</p>
+    </div>
+
+    <script src="tidtabell.js"></script> <script src="app.js" defer></script> </body>
+</html>

@@ -1,0 +1,78 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    justify-content: center; /* Centrera kontroller */
+}
+
+.controls label {
+    margin-right: 5px;
+}
+
+.controls input,
+.controls button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.controls button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+#results {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    min-height: 100px;
+}
+
+.result-item {
+    border-bottom: 1px dashed #ccc;
+    padding: 10px 0;
+}
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item strong {
+    color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.no-result {
+    color: #666;
+}
+
+.transfer-info {
+    margin-left: 20px;
+    font-style: italic;
+    color: #555;
+}
