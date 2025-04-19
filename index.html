@@ -19,11 +19,22 @@
     <style type="text/tailwindcss">
         /* Add custom CSS or @apply rules here if needed */
         body {
-            @apply bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-900 transition-colors duration-300;
+            /* Uppdaterade body textfärgen här också för mörkt läge */
+            @apply bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
         }
-        input[type="text"], input[type="date"], input[type="time"] {
-            @apply bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+
+        /* Uppdaterad regel för input-fält */
+        input[type="text"], /* För eventuella framtida explicita text-inputs */
+        input[list],       /* <-- LADE TILL DENNA RAD för att fånga Från/Till */
+        input[type="date"],
+        input[type="time"] {
+            @apply bg-white dark:bg-gray-700  /* Bakgrund */
+                   border border-gray-300 dark:border-gray-600 /* Kantlinje */
+                   rounded px-3 py-2 /* Utseende & padding */
+                   text-gray-900 dark:text-gray-100 /* <-- Explicit textfärg */
+                   focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent; /* Fokus-stilar */
         }
+
         label {
             @apply block mb-1 font-medium text-sm text-gray-700 dark:text-gray-300;
         }
